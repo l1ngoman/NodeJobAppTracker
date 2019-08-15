@@ -3,3 +3,11 @@ extends layout
 block content
   h1= title
   p Welcome to #{title}
+  form(action='/', method='POST')
+    div(style='display:flex; flex-direction:column;')
+        label() Date Applied:
+        input(type='date', name='dateApplied', value=today)
+    div(style='display:flex; flex-direction:column;')
+        label() Job Title:
+        input(type='text', name='jobTitle', placeholder='Job Title')
+    button(type='submit') Submit
